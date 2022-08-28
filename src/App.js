@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+
+import React, { useState, useEffect } from "react"
+import Home from "./pages/Home.js"
+import { Route, Routes, useLocation } from "react-router-dom"
+import { Box } from "@mui/material"
+import PhotoSharing from './pages/PhotoSharing'
+import NoMatch from './pages/NoMatch'
+import DashBoard from "./pages/Dashboard.js"
+import { createTheme, Stack, ThemeProvider, Paper } from "@mui/material"
+import theme from "./themetemplate"
+import PostDetails from "./components/PostDetails/PostDetails.jsx"
+
+
+export default function Pages() {
+  const location = useLocation()
+  // const [mode, setMode] = useState("dark")
+  
+ 
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    // <Box flex={7.5} p={2}>
+      // <AnimatePresence exitBeforeEnter>
+      <>
+       <ThemeProvider theme={theme}>
+        <Routes Location={location} key={location.pathname}>
+          <Route path="/" element={<Home />} />
+          <Route path="/posts" element={<DashBoard />} />
+          {/* <Route path="/searched/:search" element={<Searched />} /> */}
+          <Route path="/posts/:id" element={<PostDetails />} />
+          <Route path="/posts/search" element={<DashBoard />} />
+         
+          <Route path="*" element={<NoMatch />} />
+      
+        </Routes>
+        </ThemeProvider>
+        </>
+      // {/* </AnimatePresence> */}
+    // </Box>
+  )
 }
-
-export default App;
