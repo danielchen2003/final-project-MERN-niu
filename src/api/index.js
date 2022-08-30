@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const url = 'https://niu-niu-memo.herokuapp.com/posts';
-
+// const url ="http://localhost:8888/posts"
 export const fetchPost = (id) =>  axios.get(`${url}/${id}`);
 
 export const fetchPosts = () => axios.get(url);

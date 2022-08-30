@@ -28,6 +28,7 @@ import { useLocation } from "react-router-dom"
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
+  marginBottom: "12px",
   
   borderRadius: theme.shape.borderRadius,
   backgroundColor: alpha(theme.palette.common.white, 0.15),

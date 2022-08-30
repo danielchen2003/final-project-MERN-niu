@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react"
 import Home from "./pages/Home.js"
 import { Route, Routes, useLocation } from "react-router-dom"
 import { Box } from "@mui/material"
-import PhotoSharing from './pages/PhotoSharing'
+import PhotoSharing from './pages/Dashboard'
 import NoMatch from './pages/NoMatch'
 import DashBoard from "./pages/Dashboard.js"
 import { createTheme, Stack, ThemeProvider, Paper } from "@mui/material"

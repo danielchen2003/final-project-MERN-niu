@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
+import { NavLink } from "react-router-dom";
 
 function Sections({
   title,
@@ -21,8 +22,10 @@ function Sections({
       <Buttons>
         <Fade bottom>
           <ButtonGroup>
+            <NavLink to ="/posts">
             <LeftButton>{leftButtonText}</LeftButton>
-            {rightButtonText && <RightButton>{rightButtonText}</RightButton>}
+            </NavLink>
+            {rightButtonText &&  <NavLink to ="/about"><RightButton>{rightButtonText}</RightButton></NavLink>}
           </ButtonGroup>
         </Fade>
         {showDownArrow && <DownArrow src="/image/down-arrow.svg"></DownArrow>}

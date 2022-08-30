@@ -2,7 +2,7 @@
   "name": "frontend-cli",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://niu-niu-memo.herokuapp.com/",
+  "proxy": "https://niu-niu-memo.herokuapp.com",
   "dependencies": {
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",

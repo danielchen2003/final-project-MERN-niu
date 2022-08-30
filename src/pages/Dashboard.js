@@ -1,25 +1,15 @@
-import { BrowserRouter, Link } from "react-router-dom"
-// import Search from "./components/Search"
-
-import { Container, AppBar, Typography, Grow, Grid } from '@material-ui/core';
-
-import Sidebar from "../components/Sidebar/Sidebar.jsx"
-import { createTheme, Stack, ThemeProvider, Paper } from "@mui/material"
 import React, { useState, useEffect } from "react"
-import Posts from '../components/Posts/Posts';
-import { useDispatch } from 'react-redux';
-import { getPosts } from '../actions/posts';
-import PhotoSharing from "./PhotoSharing.js";
-import ResponsiveAppBar from "../components/ResponsiveAppBar/ResponsiveAppBar.jsx";
-import PrimarySearchBar from "../components/SearchBox/SearchBar2.jsx";
-import { Route, Routes, useLocation } from "react-router-dom"
-import PostDetails from "../components/PostDetails/PostDetails.jsx";
-import './Dashboard.css'
-import {styled} from "@mui/material"
+import { Container, AppBar, Typography, Grow, Grid } from "@material-ui/core"
+import { useDispatch } from "react-redux"
 
-// import { Add } from "@mui/icons-material"
-// import Footer from "./components/Footer/Footer.jsx"
-// import {Main} from "../pages/Main"
+
+import Posts from "../components/Posts/Posts"
+import Form from "../components/Form/Form"
+import { getPosts } from "../actions/posts"
+// import useStyles from '../styles';
+
+import "./Dashboard.css"
+import Sidebar from "../components/Sidebar/Sidebar"
 
 export default function Dashboard() {
   const [currentId, setCurrentId] = useState(0);
@@ -29,40 +19,33 @@ export default function Dashboard() {
     dispatch(getPosts());
   }, [currentId, dispatch]);
   
-  
-  // const StyledToolbar = styled(Toolbar)({
-  //   display: "flex",
-  //   justifyContent: "space-between",
-  //   height: "85px",
-  //   // backgroundColor: darkTheme.palette.primary.dark,
-  // })
-  
+ 
+  // const classes = useStyles();
+  // const posts = useSelector((state) => state.posts);
+ 
 
   return (
-    <div >
+    <div className="container--photo">
+    <Grow in>
+      <Container maxWidth="xl">
+        <Grid
+          container
+          justifyContent="space-between"
+          alignItems="stretch"
+          spacing={3}
+          className="gridContainer"
+        >
+          <Grid item xs={12} sm={4} md={3}>
+            <Sidebar></Sidebar>
+          </Grid>
+          <Grid item xs={12} sm={8} md={9}>
+            <Posts setCurrentId={setCurrentId} />
+          </Grid>
+        </Grid>
+      </Container>
      
-      <Paper>
-        <Stack direction="row" spacing={2} justifyContent="space-between" mt={5} mr={5}>
-          
-        {/* <Sidebar></Sidebar> */}
-        <PhotoSharing />
-    
-        </Stack>
-       
-        </Paper>
-        
-    
-    </div>
+    </Grow>
+     </div >
   )
 }
-
-// import React from "react"
-
-// export default function Dashboard() {
-//   return (
-//     <div>
-//       <h1>dash board</h1>
-//     </div>
-//   )
-// }
 

@@ -44,15 +44,7 @@ const PostDetails = () => {
 
   return (
     <div className="container">
-      {/* <Paper
-        style={{
-          padding: "20px",
-          borderRadius: "15px",
-          margin: "2rem",
-          width: "90%",
-        }}
-        elevation={6}
-      > */}
+      
       <Box  style={{
           padding: "20px",
           borderRadius: "15px",
