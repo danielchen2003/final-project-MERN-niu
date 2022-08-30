@@ -1,26 +1,26 @@
 import { createTheme } from "@material-ui/core/styles"
 
 const mainBlack = "#212121"
-const mainWhite = "#8acedb"
-const blue = "#757ce8"
+const mainTifanny = "#8acedb"
+const purple = "#757ce8"
 // Create a theme instance.
 const theme = createTheme({
   palette: {
     common: {
       black: mainBlack,
-      white: mainWhite,
-      blue: blue,
+      mainTifanny,
+      purple: purple,
     },
     primary: {
-      main: "#8acedb",
-        light: "white",
-        dark: "#2e973e",
+      main: "#ff544a",
+        light: mainTifanny,
+        dark: purple,
     },
     secondary: {
       main: "#f04328",
     },
     info: {
-      main: blue,
+      main: purple,
     },
   },
   typography: {

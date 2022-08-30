@@ -62,7 +62,7 @@ export default function Sidebar() {
           
          
           <ListItem disablePadding>
-            <ListItemButton component="a" href="/searched/ice cream">
+            <ListItemButton component="a" href="#">
               {/* navigate(`/searched/${input}`) */}
               <ListItemIcon>
                 <AddLocationIcon fontSize="large" />
@@ -72,7 +72,7 @@ export default function Sidebar() {
           </ListItem>
 
           <ListItem disablePadding>
-            <ListItemButton component="a" href="/searched/kebab">
+            <ListItemButton component="a" href="#">
               {/* navigate(`/searched/${input}`) */}
               <ListItemIcon>
                 <ChildCareIcon fontSize="large" />
@@ -81,7 +81,7 @@ export default function Sidebar() {
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton component="a" href="/searched/chicken">
+            <ListItemButton component="a" href="#">
               <ListItemIcon>
                 < BedroomBabyIcon fontSize="large" />
               </ListItemIcon>

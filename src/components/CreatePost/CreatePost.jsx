@@ -94,7 +94,7 @@ const CreatePost = () => {
     <>
       <Tooltip
         onClick={(e) => setOpen(true)}
-        title="New Recipe"
+        title="Upload New Photos"
         sx={{
           position: "fixed",
           bottom: 15,
@@ -128,7 +128,7 @@ const CreatePost = () => {
         onSubmit={handleSubmit}
       >
           <Typography variant="h6" color="info" textAlign="center" sx={{ mb: 2  }}>
-            Create New Recipe
+          Upload New Photo
           </Typography>
           <UserBox>
             <Avatar

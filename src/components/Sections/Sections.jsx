@@ -25,7 +25,7 @@ function Sections({
             {rightButtonText && <RightButton>{rightButtonText}</RightButton>}
           </ButtonGroup>
         </Fade>
-        {showDownArrow && <DownArrow src="/images/down-arrow.svg"></DownArrow>}
+        {showDownArrow && <DownArrow src="/image/down-arrow.svg"></DownArrow>}
       </Buttons>
     </Wrap>
   );
@@ -43,14 +43,19 @@ const Wrap = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-image: ${(props) => `url("/images/${props.bgImage}")`};
+  background-image: ${(props) => `url("/image/${props.bgImage}")`};
   scroll-snap-align: start;
   z-index: 1;
 `;
 
 const ItemText = styled.div`
-  padding-top: 15vh;
+ background-color: white;
+  opacity: 0.65;
+  margin-top: 15vh;
   text-align: center;
+  border-radius: 100px;
+  padding-left: 40px;
+  padding-right: 40px;
 `;
 
 const Buttons = styled.div`
@@ -60,7 +65,7 @@ const Buttons = styled.div`
 
 const ButtonGroup = styled.div`
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 65px;
   gap: 25px;
   @media (max-width: 768px) {
     flex-direction: column;
@@ -89,8 +94,8 @@ const RightButton = styled(LeftButton)`
   color: black;
 `;
 const DownArrow = styled.img`
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 90px;
   height: 40px;
   animation: bounce infinite 1.5s;
 `;

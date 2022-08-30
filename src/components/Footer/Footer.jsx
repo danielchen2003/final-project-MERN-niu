@@ -75,7 +75,7 @@ export default function Footer() {
           className="text-white"
           href="https://github.com/danielchen2003/Yummy-Yummy"
         >
-          © 2022 July Yummy-Yummy Made by Linfeng Chen On Per Scholars
+          © 2022 August Niu Niu Made by Linfeng Chen in Per Scholars
         </a>
       </div>
     </MDBFooter>

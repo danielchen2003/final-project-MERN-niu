@@ -28,17 +28,18 @@ import { useLocation } from "react-router-dom"
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
+  
   borderRadius: theme.shape.borderRadius,
   backgroundColor: alpha(theme.palette.common.white, 0.15),
   "&:hover": {
     backgroundColor: alpha(theme.palette.common.white, 0.25),
   },
   display:"flex",
-  flexdirection: "Row" ,
+  flexdirection: "row" ,
   marginRight: theme.spacing(2),
   alignItems:"center",
   marginLeft: 0,
-  width: "100%",
+  width: "80%",
   [theme.breakpoints.up("sm")]: {
     marginLeft: theme.spacing(3),
     width: "auto",
@@ -65,7 +66,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     transition: theme.transitions.create("width"),
     width: "100%",
     [theme.breakpoints.up("md")]: {
-      width: "20ch",
+      width: "100px",
     },
   },
 }))
@@ -102,21 +103,25 @@ export default function PrimarySearchBar() {
       <SearchIconWrapper>
            <ImageSearchIcon></ImageSearchIcon>
           </SearchIconWrapper>
-        <form onSubmit={sumbitHandler}>
+        <form onSubmit={sumbitHandler} style={{display: 'flex', flexDirection: 'row', margin:'10px'}}>
        
           <StyledInputBase
             
             inputProps={{ "aria-label": "search" }}
             onChange={(e) => setSearch(e.target.value)}
             type="text"
-            placeholder="Searching a Memory"
+            placeholder="Search"
             value={search}
           />
-           <Button onClick={searchPost} variant="contained" color="primary">
+         <Button onClick={searchPost} variant="contained" color="secondary">
         Search
       </Button>
+      
         </form>
+        
+       
       </Search>
+     
     </>
   )
 }

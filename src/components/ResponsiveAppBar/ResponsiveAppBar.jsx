@@ -49,8 +49,8 @@ const ResponsiveAppBar = () => {
 
   return (
     <AppBar position="static" color="primary" >
-      <Container maxWidth="lg" >
-        <StyledToolbar  disableGutters justifyContent="flex-end">
+     
+        <StyledToolbar  disableGutters >
           
       <Stack  direction="row"  spacing={2} alignItems='center'>
         <Box
@@ -61,11 +61,13 @@ const ResponsiveAppBar = () => {
             alt="Your logo."
             src={images.logo}
         />
+        
+       
           <Typography
-            variant="h6"
+            variant="h3"
             noWrap
             component="a"
-            href="/"
+            fontFamily="Source Serif Pro"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -151,42 +153,9 @@ const ResponsiveAppBar = () => {
           
           </Box>
           
-        
-          
-     
-          
-
-          <Box  sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
+      
         </StyledToolbar>
-      </Container>
+     
     </AppBar>
   );
 };

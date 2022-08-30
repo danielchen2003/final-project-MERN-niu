@@ -1,6 +1,6 @@
 import { BrowserRouter, Link } from "react-router-dom"
 // import Search from "./components/Search"
-import styled from "styled-components"
+
 import { Container, AppBar, Typography, Grow, Grid } from '@material-ui/core';
 
 import Sidebar from "../components/Sidebar/Sidebar.jsx"
@@ -14,8 +14,8 @@ import ResponsiveAppBar from "../components/ResponsiveAppBar/ResponsiveAppBar.js
 import PrimarySearchBar from "../components/SearchBox/SearchBar2.jsx";
 import { Route, Routes, useLocation } from "react-router-dom"
 import PostDetails from "../components/PostDetails/PostDetails.jsx";
-
-
+import './Dashboard.css'
+import {styled} from "@mui/material"
 
 // import { Add } from "@mui/icons-material"
 // import Footer from "./components/Footer/Footer.jsx"
@@ -28,22 +28,27 @@ export default function Dashboard() {
   useEffect(() => {
     dispatch(getPosts());
   }, [currentId, dispatch]);
+  
+  
+  // const StyledToolbar = styled(Toolbar)({
+  //   display: "flex",
+  //   justifyContent: "space-between",
+  //   height: "85px",
+  //   // backgroundColor: darkTheme.palette.primary.dark,
+  // })
+  
 
   return (
-    <div className="DashBoard">
-      <Paper >
-        <ResponsiveAppBar></ResponsiveAppBar>
-  
-        <Stack direction="row" spacing={3} justifyContent="space-between" padding="30px">
-        <Sidebar></Sidebar>
-         <PhotoSharing />
-         <Routes>
-         
-       
-          <Route path="/posts/:id" element={<PostDetails />} />
-          </Routes>
+    <div >
+     
+      <Paper>
+        <Stack direction="row" spacing={2} justifyContent="space-between" mt={5} mr={5}>
+          
+        {/* <Sidebar></Sidebar> */}
+        <PhotoSharing />
+    
         </Stack>
-        <h3>Footer</h3>
+       
         </Paper>
         
     
@@ -60,3 +65,4 @@ export default function Dashboard() {
 //     </div>
 //   )
 // }
+
