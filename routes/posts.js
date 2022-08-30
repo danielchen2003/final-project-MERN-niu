@@ -6,11 +6,12 @@ const router = express.Router();
 
 router.get('/', getPosts);
 
-router.get('/search', getPostsBySearch);  
+  
 router.post('/', createPost);
 router.get('/:id', getPost);
 router.patch('/:id', updatePost);
 router.delete('/:id', deletePost);
 router.patch('/:id/likePost', likePost);
+router.get('/search', getPostsBySearch);
 
 export default router;
