@@ -2,6 +2,7 @@ import React from "react"
 
 import * as mdb from 'mdb-ui-kit'; // lib
 import { Input } from 'mdb-ui-kit'; // module
+import './Footer.css'
 
 import {
   MDBFooter,
@@ -14,8 +15,9 @@ import {
 
 export default function Footer() {
   return (
-    <MDBFooter className="text-center text-dark bg-dark">
-      <div className="container p-4 pb-0">
+    <div className="Footer--warp">
+    <MDBFooter className="bg-dark text-center text-white">
+      <div className="container p-4 pb-0" style={{width: "100%"}}>
         <section className="mb-4">
           <a
             className="m-1 btn btn-primary btn-floating"
@@ -73,8 +75,8 @@ export default function Footer() {
       </div>
 
       <div
-        className="p-3 text-center"
-        style={{ backgroundColor: "rgb(240,67,40)" }}
+        className="p-3 text-center Footer--bottom"
+        style={{ backgroundColor: "#ff544a" }}
       >
         <a
           className="text-white"
@@ -84,5 +86,6 @@ export default function Footer() {
         </a>
       </div>
     </MDBFooter>
+    </div>
   )
 }

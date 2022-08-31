@@ -43,7 +43,7 @@ const PostDetails = () => {
   if (loading) return <CircularProgress />
 
   return (
-    <div className="container">
+    <div className="container--PostDetails">
       
       <Box  style={{
           padding: "20px",
