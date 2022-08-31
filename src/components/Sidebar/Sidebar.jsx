@@ -43,7 +43,7 @@ import SearchBox from "../SearchBox/SearchBox"
 import PrimarySearchBar from "../SearchBox/SearchBar2"
 
 
-export default function Sidebar() {
+export default function Sidebar({ mode, setMode }) {
  
   return (
     <Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
@@ -96,7 +96,7 @@ export default function Sidebar() {
                 <ModeNight fontSize="large" />
               </ListItemIcon>
               <Switch
-                // onChange={(e) => setMode(mode === "light" ? "dark" : "light")}
+                onChange={(e) => setMode(mode === "light" ? "dark" : "light")}
               />
             </ListItemButton>
           </ListItem>

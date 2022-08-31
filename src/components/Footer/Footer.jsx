@@ -1,4 +1,8 @@
 import React from "react"
+
+import * as mdb from 'mdb-ui-kit'; // lib
+import { Input } from 'mdb-ui-kit'; // module
+
 import {
   MDBFooter,
   MDBContainer,
@@ -7,9 +11,10 @@ import {
   MDBIcon,
 } from "mdb-react-ui-kit"
 
+
 export default function Footer() {
   return (
-    <MDBFooter className="text-center text-white bg-dark">
+    <MDBFooter className="text-center text-dark bg-dark">
       <div className="container p-4 pb-0">
         <section className="mb-4">
           <a

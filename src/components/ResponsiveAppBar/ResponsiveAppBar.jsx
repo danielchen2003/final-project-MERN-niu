@@ -53,6 +53,8 @@ const ResponsiveAppBar = () => {
         <StyledToolbar  disableGutters >
           
       <Stack  direction="row"  spacing={2} alignItems='center'>
+        
+     
         <Box
             component="img"
             sx={{
@@ -62,9 +64,9 @@ const ResponsiveAppBar = () => {
             src={images.logo}
         />
         
-       
+        <Link href="/" textDecoration="none" underline="none" color="white">
           <Typography
-            variant="h3"
+            variant="h1"
             noWrap
             component="a"
             fontFamily="Source Serif Pro"
@@ -74,12 +76,13 @@ const ResponsiveAppBar = () => {
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: 'primary',
+              color: "#FFFFFF",
               textDecoration: 'none',
             }}
           >
             NiuNiu
           </Typography>
+          </Link>
           </Stack>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -98,12 +101,12 @@ const ResponsiveAppBar = () => {
               anchorEl={anchorElNav}
               anchorOrigin={{
                 vertical: 'top',
-        horizontal: 'right',
+        horizontal: 'left',
               }}
               keepMounted
               transformOrigin={{
                 vertical: 'top',
-                horizontal: 'right',
+                horizontal: 'left',
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}

@@ -27,7 +27,7 @@ const Aboutme = () => {
           </p>
 
           <p>
-            This summer, my wife’s father passed away. He loved looking at his
+            This summer, my wife’s grandpa passed away. He loved looking at his
             granddaughters’ album, and he would leave the most touching comments
             on their photos and videos.
           </p>

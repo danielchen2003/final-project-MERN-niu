@@ -18,6 +18,7 @@
     "axios": "^0.27.2",
     "material-ui-chip-input": "^0.19.0",
     "mdb-react-ui-kit": "^4.2.0",
+    "mdb-ui-kit": "^5.0.0",
     "moment": "^2.29.4",
     "nanoid": "^4.0.0",
     "prop-types": "^15.8.1",

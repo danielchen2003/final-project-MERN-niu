@@ -6,7 +6,7 @@ import {
   Divider,
   Box,
   CardMedia,
-} from "@material-ui/core/"
+} from "@mui/material"
 import { useDispatch, useSelector } from "react-redux"
 
 import { useParams } from "react-router-dom"
@@ -55,7 +55,7 @@ const PostDetails = () => {
         }}>
         <div className={classes.card}>
           <div className={classes.section}>
-            <Typography variant="h3" component="h2" align="left">
+            <Typography variant="h3" component="h3" align="left">
               {post.title}
             </Typography>
 
@@ -68,7 +68,7 @@ const PostDetails = () => {
               gutterBottom
               variant="h6"
               color="primary"
-              component="h2"
+              component="h3"
               align="left"
             >
               {post.tags && post.tags.map((tag) => `#${tag},`).join(" ")}

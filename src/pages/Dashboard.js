@@ -11,7 +11,7 @@ import { getPosts } from "../actions/posts"
 import "./Dashboard.css"
 import Sidebar from "../components/Sidebar/Sidebar"
 
-export default function Dashboard() {
+export default function Dashboard({mode,setMode}) {
   const [currentId, setCurrentId] = useState(0);
   const dispatch = useDispatch();
 // TODO 这里是客人真的需要菜了 dispatch 派遣 getpost 然后把state 转换成新的state 储存在post里面
@@ -36,7 +36,7 @@ export default function Dashboard() {
           className="gridContainer"
         >
           <Grid item xs={12} sm={4} md={3}>
-            <Sidebar></Sidebar>
+            <Sidebar setMode={setMode} mode={mode}></Sidebar>
           </Grid>
           <Grid item xs={12} sm={8} md={9}>
             <Posts setCurrentId={setCurrentId} />
