@@ -23,7 +23,7 @@ export default function Dashboard({mode,setMode}) {
   // const classes = useStyles();
   // const posts = useSelector((state) => state.posts);
  
-
+  
   return (
     <div className="container--photo">
     <Grow in>

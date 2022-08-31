@@ -54,7 +54,7 @@ export default function Pages() {
           <Route path="/posts/search" element={<DashBoard />} />
           
           <Route path="/about" element={<Aboutme />} />
-          <Route path="footer" element={ <Footer />} />
+          
           <Route path="*" element={<NoMatch />} />
          
           
