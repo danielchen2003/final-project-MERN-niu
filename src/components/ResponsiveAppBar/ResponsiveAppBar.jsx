@@ -19,11 +19,13 @@ import PrimarySearchBar from '../SearchBox/SearchBar2';
 import { Stack } from '@mui/system';
 
 const pages = ['Home', 'Memories', 'About'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  
+
   
   const StyledToolbar = styled(Toolbar)({
     display: "flex",
@@ -85,42 +87,7 @@ const ResponsiveAppBar = () => {
           </Link>
           </Stack>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="primary"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'top',
-        horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem> 
-              ))}
-            </Menu>
-          </Box>
+        
           <PrimarySearchBar></PrimarySearchBar>
           {/* * // TODO //flexgrow让它撑大 */}
           
@@ -155,7 +122,53 @@ const ResponsiveAppBar = () => {
               </Link>
           
           </Box>
-          
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+            <IconButton
+              size="large"
+              aria-label="account of current user"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleOpenNavMenu}
+              color="secondary"
+            >
+              <MenuIcon />
+            </IconButton>
+            <Menu
+              id="demo-positioned-menu"
+              aria-labelledby="demo-positioned-button"
+              anchorOrigin={{
+                vertical: 'top',
+        horizontal: 'right',
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+              sx={{
+                display: { xs: 'block', md: 'none' },
+              }}
+            >
+                <MenuItem key="001" onClick={handleCloseNavMenu}>
+          <Link href="/" textDecoration="none" underline="none">
+          <Typography textAlign="center">HOME</Typography>
+          </Link>
+        </MenuItem>
+        <MenuItem key="002" onClick={handleCloseNavMenu}>
+          <Link href="/posts" textDecoration="none" underline="none">
+          <Typography textAlign="center">MEMORIES</Typography>
+          </Link>
+        </MenuItem>
+        <MenuItem key="003" onClick={handleCloseNavMenu}>
+          <Link href="/about" textDecoration="none" underline="none">
+          <Typography textAlign="center">ABOUT</Typography>
+          </Link>
+        </MenuItem>
+             
+            </Menu>
+          </Box>
       
         </StyledToolbar>
      

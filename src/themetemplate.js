@@ -17,7 +17,7 @@ const theme = createTheme({
         dark: purple,
     },
     secondary: {
-      main: "#f04328",
+      main: mainTifanny,
     },
     info: {
       main: purple,
